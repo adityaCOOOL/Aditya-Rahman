@@ -1,0 +1,457 @@
+/* Mengatur margin, padding, dan ukuran elemen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mengatur font, warna teks, dan latar halaman */
+body {
+    font-family: Arial, sans-serif;
+    color: #123456;
+    background: white;
+}
+
+
+/* =========================================
+   BAGIAN HEADER
+   Mengatur bagian paling atas website
+   ========================================= */
+
+/* Mengatur tinggi, warna, motif, dan posisi header */
+.header {
+    height: 190px;
+    background-color: #28579b;
+    background-image:
+        radial-gradient(circle at 20% 40%, transparent 12px, #194780 13px, transparent 16px),
+        radial-gradient(circle at 70% 70%, transparent 15px, #194780 16px, transparent 19px);
+    background-size: 65px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-top: 5px solid #17447f;
+}
+/* Mengatur kotak tempat logo header */
+.logo-box {
+    width: 250px;
+    line-height: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+}
+/* Mengatur ukuran dan posisi gambar logo PNG */
+.logo-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* =========================================
+   BAGIAN CONTENT / KONTEN TENGAH
+   Mengatur area utama di bawah header
+   ========================================= */
+
+/* Mengatur tinggi, latar, dan posisi konten */
+.main-content {
+    height: 520px;
+    position: relative;
+    overflow: hidden;
+    background: #2700ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Pengaturan area konten yang sama seperti kode asli */
+.main-content {
+    height: 520px;
+    position: relative;
+    overflow: hidden;
+    background: #2700ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* =========================================
+   CONTENT: BUMI / GLOBE
+   ========================================= */
+
+/* Membuat area bumi berbentuk lingkaran */
+.globe {
+    position: relative;
+    width: min(59vw, 530px);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #2700ff;
+    box-shadow: none;
+    flex-shrink: 0;
+    z-index: 1;
+}
+/* Mengatur ukuran, posisi, dan pemotongan gambar bumi */
+.globe img {
+    position: absolute;
+    width: 160%;
+    height: 160%;
+    max-width: none;
+    left: -30%;
+    top: -30%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 0;
+    filter: none;
+}
+
+
+/* =========================================
+   CONTENT: TITIK LOKASI PADA BUMI
+   ========================================= */
+
+/* Membuat lingkaran penanda lokasi */
+.location-point {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #00ffad;
+    border-radius: 50%;
+    top: 48%;
+    left: 48%;
+    z-index: 2;
+    pointer-events: none;
+}
+/* Membuat titik kecil di tengah penanda lokasi */
+.location-point::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #00ffad;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* Aturan titik lokasi kedua sesuai kode asli */
+.location-point::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #00ffad;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* =========================================
+   CONTENT: PANEL RADIO KIRI BAWAH
+   ========================================= */
+
+/* Mengatur posisi dan ukuran panel radio */
+.radio-panel {
+    position: absolute;
+    left: 5px;
+    bottom: 8px;
+    width: 170px;
+    z-index: 3;
+    font-size: 10px;
+}
+/* Mengatur kotak informasi stasiun Horta */
+.station {
+    background: #4930ff;
+    color: white;
+    border-radius: 4px 4px 0 0;
+    padding: 10px 7px 5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+/* Mengatur lingkaran nomor stasiun */
+.station-number {
+    background: white;
+    color: #5634ff;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+/* Mengatur ukuran nama stasiun */
+.station-info p {
+    font-size: 13px;
+}
+/* Mengatur ukuran lokasi atau negara stasiun */
+.station-info small {
+    font-size: 8px;
+}
+/* Mengatur posisi dan ukuran jam stasiun */
+.station-time {
+    margin-left: auto;
+    align-self: flex-end;
+    font-size: 8px;
+}
+
+
+/* =========================================
+   CONTENT: MENU RADIO
+   Mengatur menu Jelajahi, Favorit, dan lainnya
+   ========================================= */
+
+/* Mengatur susunan menu dan latar belakangnya */
+.radio-menu {
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    padding: 7px 2px;
+    color: #777;
+    text-align: center;
+}
+/* Mengatur posisi ikon dan teks setiap menu */
+.radio-menu span {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: 13px;
+}
+/* Mengatur ukuran teks di bawah ikon menu */
+.radio-menu small {
+    font-size: 7px;
+}
+/* Memberi warna hijau pada menu pertama */
+.radio-menu span:first-child {
+    color: #19c886;
+}
+
+
+/* =========================================
+   CONTENT: PEMUTAR RADIO
+   ========================================= */
+
+/* Mengatur kotak pemutar radio */
+.player {
+    background: white;
+    border-radius: 4px;
+    margin-top: 8px;
+    padding: 10px;
+    color: #777;
+}
+/* Mengatur posisi judul radio dan ikon favorit */
+.player-title {
+    display: flex;
+    justify-content: space-between;
+}
+/* Mengatur tulisan nama radio */
+.player-title strong {
+    display: block;
+    color: #18b875;
+    font-size: 10px;
+}
+/* Mengatur tulisan lokasi radio */
+.player-title small {
+    display: block;
+    margin-top: 3px;
+    font-size: 8px;
+}
+/* Mengatur susunan tombol pemutar radio */
+.player-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+/* Mengatur warna tombol jeda */
+.pause {
+    color: #111;
+}
+/* Membuat garis pengatur volume */
+.volume {
+    width: 45px;
+    height: 2px;
+    background: #13c879;
+    position: relative;
+}
+/* Membuat bulatan pengatur volume */
+.volume::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #13c879;
+    border-radius: 50%;
+    top: -3px;
+    left: 65%;
+}
+
+
+/* =========================================
+   CONTENT: TOMBOL KONTROL KANAN
+   ========================================= */
+
+/* Mengatur posisi tombol di kanan bawah konten */
+.map-controls {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 3;
+}
+/* Mengatur bentuk, ukuran, dan warna tombol peta */
+.map-controls button {
+    width: 23px;
+    height: 23px;
+    border: none;
+    border-radius: 5px;
+    background: #6045ff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   BAGIAN FOOTER
+   Mengatur bagian paling bawah website
+   ========================================= */
+
+/* Mengatur tata letak, jarak, dan garis atas footer */
+.footer {
+    min-height: 180px;
+    padding: 25px 2%;
+    display: grid;
+    grid-template-columns: 2fr 0.8fr 0.9fr 0.8fr;
+    gap: 25px;
+    background: white;
+    border-top: 6px solid #65ffe9;
+}
+/* Mengatur kelompok logo, bahasa, dan media sosial */
+.footer-brand {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+/* Mengatur posisi logo Poki dan slogan */
+.brand-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+}
+/* Mengatur tampilan tulisan logo Poki */
+.poki-logo {
+    color: #11365b;
+    font-size: 23px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    font-style: italic;
+}
+/* Mengatur ukuran tulisan slogan footer */
+.brand-title > strong:last-child {
+    font-size: 10px;
+}
+/* Mengatur tombol pemilihan bahasa */
+.language {
+    width: 135px;
+    border: 1px solid #168cff;
+    color: #168cff;
+    border-radius: 18px;
+    padding: 6px;
+    background: white;
+    font-size: 9px;
+}
+/* Mengatur posisi ikon media sosial */
+.social-media {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+}
+/* Mengatur bentuk dan warna ikon media sosial */
+.social-media span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #12385b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+/* Mengatur susunan isi setiap kolom footer */
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+/* Mengatur judul kolom footer */
+.footer-column h4 {
+    color: #a0afc1;
+    font-size: 7px;
+    margin-bottom: 2px;
+}
+/* Mengatur tampilan tautan di kolom footer */
+.footer-column a {
+    text-decoration: none;
+    color: #193a5b;
+    font-size: 8px;
+    font-weight: bold;
+}
+/* Mengubah warna tautan ketika diarahkan kursor */
+.footer-column a:hover {
+    color: #168cff;
+}
+
+
+/* =========================================
+   Mengatur tampilan pada layar kecil
+   ========================================= */
+
+@media (max-width: 600px) {
+    /* Memperkecil tinggi header di layar kecil */
+    .header {
+        height: 150px;
+    }
+    /* Memperkecil tinggi area content */
+    .main-content {
+        height: 430px;
+    }
+    /* Memperbesar ukuran relatif bumi pada layar kecil */
+    .globe {
+        width: 85vw;
+    }
+    /* Menyesuaikan panel radio pada layar kecil */
+    .radio-panel {
+        width: 145px;
+        transform: scale(0.9);
+        transform-origin: bottom left;
+    }
+    /* Menyusun footer menjadi dua kolom */
+    .footer {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px 15px;
+        padding: 22px 15px;
+    }
+    /* Membuat bagian merek memenuhi lebar footer */
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+    /* Memperbesar teks tautan footer pada layar kecil */
+    .footer-column a {
+        font-size: 9px;
+    }
+}
